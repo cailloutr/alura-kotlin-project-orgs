@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Orgs</string>
+    <string name="activity_formulario_produto_imageView_content_description">Imagem ilustrativa do produto</string>
+    <string name="activity_formulario_produto_text_input_hint_name">Nome</string>
+    <string name="activity_formulario_produto_text_input_hint_description">Descrição</string>
+    <string name="activity_formulario_produto_text_input_hint_price">Valor</string>
+    <string name="activity_formulario_produto_button_save">Salvar</string>
+    <string name="dialog_button_text">Carregar</string>
+    <string name="dialog_text_input_hint_url">URL da imagem</string>
+    <string name="lista_produto_button_adicionar_produto_content_description">Adicionar novo produto</string>
+    <string name="lista_produto_button_adicionar_produto">Novo Produto</string>
 </resources>

@@ -21,7 +21,7 @@ class ListaProdutosAdapter(
         fun bind(produto: Produto) {
             binding.nome.text = produto.noma
             binding.descricao.text = produto.descricao
-            binding.price.text = produto.preco.toPlainString()
+            binding.price.text = produto.getFormatedPrice()
         }
     }
 
