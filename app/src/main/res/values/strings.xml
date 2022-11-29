@@ -9,4 +9,8 @@
     <string name="dialog_text_input_hint_url">URL da imagem</string>
     <string name="lista_produto_button_adicionar_produto_content_description">Adicionar novo produto</string>
     <string name="lista_produto_button_adicionar_produto">Novo Produto</string>
+    <string name="load_image_dialog_cancel_label">Cancelar</string>
+    <string name="load_image_dialog_confirm_label">Confirmar</string>
+    <string name="produto_imageview_content_description">Item image</string>
+    <string name="formulario_produto_activity_app_title">Cadastrar Produto</string>
 </resources>
