@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.orgs.dao.ProdutoDao
 import com.example.orgs.databinding.FragmentFormularioProdutoBinding
@@ -27,6 +28,8 @@ class FormularioProdutoFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         produtoDao = ProdutoDao()
+
+        (activity as AppCompatActivity).supportActionBar?.show()
     }
 
     override fun onCreateView(

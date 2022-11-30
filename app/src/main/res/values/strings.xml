@@ -13,4 +13,7 @@
     <string name="load_image_dialog_confirm_label">Confirmar</string>
     <string name="produto_imageview_content_description">Item image</string>
     <string name="formulario_produto_activity_app_title">Cadastrar Produto</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_deatil_imagem_ilustrativa_do_produto">Imagem ilustrativa do produto</string>
 </resources>

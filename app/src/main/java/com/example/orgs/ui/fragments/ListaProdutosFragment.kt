@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,6 +25,8 @@ class ListaProdutosFragment : Fragment() {
         super.onCreate(savedInstanceState)
         produtoDao = ProdutoDao()
         listaProdutosAdapter = ListaProdutosAdapter(requireContext(), produtoDao.buscaTodos())
+
+        (activity as AppCompatActivity).supportActionBar?.show()
     }
 
     override fun onCreateView(
@@ -45,6 +48,7 @@ class ListaProdutosFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         listaProdutosAdapter.atualiza(produtoDao.buscaTodos())
+        (activity as AppCompatActivity).supportActionBar?.show()
     }
 
     fun configuraFab() {
@@ -60,6 +64,9 @@ class ListaProdutosFragment : Fragment() {
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.recyclerView.adapter = listaProdutosAdapter
+        listaProdutosAdapter.quandoClicaNoItemListener = {
+            findNavController().navigate(ListaProdutosFragmentDirections.actionListaProdutosFragmentToDetailFragment(it))
+        }
     }
 
     override fun onDestroyView() {

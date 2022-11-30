@@ -11,15 +11,28 @@ import com.example.orgs.model.Produto
 class ListaProdutosAdapter(
     private val context: Context,
     produtos: List<Produto>,
+    var quandoClicaNoItemListener: (produto: Produto) -> Unit = {}
 ) : RecyclerView.Adapter<ListaProdutosAdapter.ViewHolder>() {
 
     private val produtos = produtos.toMutableList()
 
-    class ViewHolder(
+
+    inner class ViewHolder(
         private val binding: ProdutoItemBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        private lateinit var produto: Produto
+
+        init {
+            itemView.setOnClickListener{
+                if(::produto.isInitialized) {
+                    quandoClicaNoItemListener(produto)
+                }
+            }
+        }
+
         fun bind(produto: Produto) {
+            this.produto = produto
             binding.nome.text = produto.noma
             binding.descricao.text = produto.descricao
             binding.price.text = produto.getFormatedPrice()
